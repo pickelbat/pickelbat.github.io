@@ -1,37 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DJ Landing Page</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Landing</title>
+
+<style>
+
+body {
+  margin:0;
+  font-family: Arial;
+  color:white;
+  text-align:center;
+  background:black;
+}
+
+/* VIDEO BACKGROUND */
+
+.video-background {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  overflow:hidden;
+}
+
+.video-background iframe {
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+}
+
+/* CONTENT */
+
+.content {
+  position:relative;
+  z-index:1;
+  padding-top:40vh;
+}
+
+h1 {
+  font-size:48px;
+}
+
+button {
+  padding:16px 28px;
+  font-size:18px;
+  background:#1DB954;
+  border:none;
+  border-radius:8px;
+  color:white;
+  cursor:pointer;
+}
+
+</style>
 </head>
+
 <body>
-  <main class="container">
-    <section class="hero">
-      <h1>DJ NAME</h1>
-      <p>Live in Bogotá, Colombia</p>
-    </section>
 
-    <section class="video-section">
-      <h2>Highlight Reel</h2>
-      <div class="video-wrap">
-        <video controls playsinline poster="">
-          <source src="highlight-reel.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </section>
+<div class="video-background">
+<iframe
+src="https://www.youtube.com/embed/6U_Adjz_Ma4?autoplay=1&mute=1&controls=0&loop=1&playlist=6U_Adjz_Ma4"
+frameborder="0"
+allow="autoplay; encrypted-media"
+allowfullscreen>
+</iframe>
+</div>
 
-    <section class="buttons">
-      <a class="btn" href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer">
-        Listen on Spotify
-      </a>
+<div class="content">
 
-      <a class="btn secondary" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-        Follow on Instagram
-      </a>
-    </section>
-  </main>
+<h1>DJ NAME</h1>
+
+<br>
+
+<a href="https://open.spotify.com/" target="_blank">
+<button>Listen on Spotify</button>
+</a>
+
+</div>
+
 </body>
 </html>
